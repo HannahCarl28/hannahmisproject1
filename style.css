@@ -4,7 +4,7 @@
 :root {
     --primary-color: #D48F7A;    /* UMD Maroon */
     --secondary-color: #000000;  /* UMD Gold */
-    --text-color: #07012b;
+    --text-color: #070539;
     --background-color: #B6D9E0;
     --gray: #c7c7c7;
 }
@@ -309,6 +309,128 @@ img {
     margin-bottom: 1rem;
 }
 
+/* fishing section: right-side image that matches team photo style */
+.fishing-row {
+     display: flex;
+     gap: 1rem;
+     align-items: center;
+}
+
+.fishing-text {
+     flex: 1 1 auto;
+     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+     .fishing-row {
+          flex-direction: column-reverse;
+          align-items: center;
+          text-align: center;
+     }
+}
+
+/* Travel section: right-side image that matches team photo style */
+.travel-row {
+     display: flex;
+     gap: 1rem;
+     align-items: center;
+}
+
+.travel-text {
+     flex: 1 1 auto;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+     .travel-row {
+          flex-direction: column-reverse;
+          align-items: center;
+          text-align: center;
+     }
+}
+
+/* Hunting row: left-side image matching statue sizing/style */
+.hunt-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.hunt-text {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+/* Ensure travel and hunt images match exactly */
+.travel-image, .hunt-image {
+    width: 160px;
+    height: 160px;
+    flex: 0 0 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+    .hunt-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .travel-image, .hunt-image {
+        width: 160px;
+        height: 160px;
+        flex: none;
+    }
+}
+
+/* Swimming section: left-aligned headshot that matches .profile-image style */
+.swim-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center; /* vertically center heading with image */
+}
+
+.swim-text {
+    flex: 1 1 auto;
+    text-align: center; /* keep paragraphs left-aligned when image is present */
+}
+
+.swim-text h3 {
+    text-align: center; /* center the Swimming header */
+    margin-top: 0;
+    color: var(--gray);
+}
+
+.profile-image.small {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .swim-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .swim-text {
+        text-align: center;
+    }
+
+    .profile-image.small {
+        width: 160px;
+        height: 160px;
+    }
+}
+
 .content-text video {
     max-width: 100%;
     border-radius: 10px;
@@ -335,7 +457,7 @@ img {
 }
 
 .stat {
-    background-color: var(--primary-color);
+    background-color: var(--text-color);
     color: white;
     padding: 0.8rem 1.5rem;
     border-radius: 25px;
@@ -344,7 +466,7 @@ img {
 }
 
 .game-subtitle {
-    color: var(--primary-color);
+    color: #030060;
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
 }
@@ -364,7 +486,7 @@ img {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    background-color: var(--primary-color);
+    background-color: var(--text-color);
     color: white;
 }
 
@@ -375,18 +497,18 @@ img {
 
 .difficulty-selector {
     margin: 1.5rem 0;
-    color:#070539
+    color:#030060
 }
 
 .difficulty-selector select {
     padding: 0.8rem 1.5rem;
-    border: 2px solid var(--primary-color);
+    border: 2px solid #030060;
     border-radius: 25px;
     background: #070539;
     font-size: 1rem;
     cursor: pointer;
     margin-left: 1rem;
-    color:#B6D9E0
+    color:white
 }
 
 .instructions {
@@ -407,6 +529,7 @@ img {
     max-width: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #B6D9E0;
 }
 
 .game-over {
